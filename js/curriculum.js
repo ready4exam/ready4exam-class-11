@@ -1,4 +1,4 @@
-export const curriculum = export const curriculum = {
+export const curriculum = {
   "Physics": {
     "Physics Part I": [
       { "chapter_title": "Physical World", "table_id": "physical_world_11_quiz", "section": "Science" },
@@ -88,5 +88,30 @@ export const curriculum = export const curriculum = {
       { "chapter_title": "Probability", "table_id": "probability_probability_11_quiz", "section": "Science/Commerce" }
     ]
   },
+
+  "English": {
+    "Hornbill (Textbook)": [
+      { "chapter_title": "The Portrait of a Lady", "table_id": "portrait_lady_11_quiz", "section": "Science/Commerce/Humanities" },
+      { "chapter_title": "A Photograph (Poem)", "table_id": "photograph_poem_11_quiz", "section": "Science/Commerce/Humanities" },
+      { "chapter_title": "We’re Not Afraid to Die... if we can all be together", "table_id": "we_together_11_quiz", "section": "Science/Commerce/Humanities" },
+      { "chapter_title": "Discovering Tut: the Saga Continues", "table_id": "discovering_continues_11_quiz", "section": "Science/Commerce/Humanities" },
+      { "chapter_title": "The Laburnum Top (Poem)", "table_id": "laburnum_poem_11_quiz", "section": "Science/Commerce/Humanities" },
+      { "chapter_title": "Landscape of the Soul", "table_id": "landscape_soul_11_quiz", "section": "Science/Commerce/Humanities" },
+      { "chapter_title": "The Voice of the Rain (Poem)", "table_id": "voice_poem_11_quiz", "section": "Science/Commerce/Humanities" },
+      { "chapter_title": "The Ailing Planet: the Green Movement’s Role", "table_id": "ailing_role_11_quiz", "section": "Science/Commerce/Humanities" },
+      { "chapter_title": "Childhood (Poem)", "table_id": "childhood_poem_11_quiz", "section": "Science/Commerce/Humanities" },
+      { "chapter_title": "Father to Son (Poem)", "table_id": "father_poem_11_quiz", "section": "Science/Commerce/Humanities" }
+    ],
+    "Snapshots (Supplementary Reader)": [
+      { "chapter_title": "The Summer of the Beautiful White Horse", "table_id": "summer_horse_11_quiz", "section": "Science/Commerce/Humanities" },
+      { "chapter_title": "The Address", "table_id": "address_address_11_quiz", "section": "Science/Commerce/Humanities" },
+      { "chapter_title": "Ranga’s Marriage", "table_id": "ranga_marriage_11_quiz", "section": "Science/Commerce/Humanities" },
+      { "chapter_title": "Albert Einstein at School", "table_id": "albert_school_11_quiz", "section": "Science/Commerce/Humanities" },
+      { "chapter_title": "Mother’s Day", "table_id": "mother_day_11_quiz", "section": "Science/Commerce/Humanities" },
+      { "chapter_title": "The Ghat of the only World", "table_id": "ghat_world_11_quiz", "section": "Science/Commerce/Humanities" },
+      { "chapter_title": "Birth", "table_id": "birth_birth_11_quiz", "section": "Science/Commerce/Humanities" }
+    ]
+  }
+};
 
 export default curriculum;
