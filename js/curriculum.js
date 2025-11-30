@@ -28,7 +28,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Work, Energy and Power",
-        "table_id": "Ch 6",
+        "table_id": "work_power_11_quiz",
         "section": "Science"
       },
       {
