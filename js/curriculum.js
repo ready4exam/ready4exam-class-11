@@ -27,7 +27,6 @@ export const curriculum = {
       { "chapter_title": "Structure of Atom", "table_id": "structure_atom_11_quiz", "section": "Science" },
       { "chapter_title": "Classification of Elements and Periodicity in Properties", "table_id": "classification_properties_11_quiz", "section": "Science" },
       { "chapter_title": "Chemical Bonding and Molecular Structure", "table_id": "chemical_structure_11_quiz", "section": "Science" },
-      { "chapter_title": "Thermodynamics", "table_id": "thermodynamics_thermodynamics_11_quiz", "section": "Science" },
       { "chapter_title": "Equilibrium", "table_id": "equilibrium_equilibrium_11_quiz", "section": "Science" }
     ],
     "Chemistry Part II": [
