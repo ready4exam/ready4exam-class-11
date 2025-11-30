@@ -604,7 +604,7 @@ export const curriculum = {
     ],
     "Introductory Microeconomics": [
       {
-        "chapter_title": "Introduction",
+        "chapter_title": "Introduction to Economics",
         "table_id": "Ch 1",
         "section": "Commerce"
       },
