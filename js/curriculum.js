@@ -27,6 +27,7 @@ export const curriculum = {
       { "chapter_title": "Structure of Atom", "table_id": "structure_atom_11_quiz", "section": "Science" },
       { "chapter_title": "Classification of Elements and Periodicity in Properties", "table_id": "classification_properties_11_quiz", "section": "Science" },
       { "chapter_title": "Chemical Bonding and Molecular Structure", "table_id": "chemical_structure_11_quiz", "section": "Science" },
+      { "chapter_title": "Thermodynamics", "table_id": "thermodynamics_thermodynamics_11_quiz", "section": "Science" },
       { "chapter_title": "Equilibrium", "table_id": "equilibrium_equilibrium_11_quiz", "section": "Science" }
     ],
     "Chemistry Part II": [
@@ -41,7 +42,7 @@ export const curriculum = {
 
   "Biology": {
     "Biology": [
-      { "chapter_title": "The Living World", "table_id": "Ch 1", "section": "Science" },
+      { "chapter_title": "The Living World", "table_id": "the_living_world_11_quiz", "section": "Science" },
       { "chapter_title": "Biological Classification", "table_id": "biological_classification_11_quiz", "section": "Science" },
       { "chapter_title": "Plant Kingdom", "table_id": "plant_kingdom_11_quiz", "section": "Science" },
       { "chapter_title": "Animal Kingdom", "table_id": "animal_kingdom_11_quiz", "section": "Science" },
@@ -111,7 +112,169 @@ export const curriculum = {
       { "chapter_title": "The Ghat of the only World", "table_id": "ghat_world_11_quiz", "section": "Science/Commerce/Humanities" },
       { "chapter_title": "Birth", "table_id": "birth_birth_11_quiz", "section": "Science/Commerce/Humanities" }
     ]
+  },
+
+  "Accountancy": {
+    "Financial Accounting Part I": [
+      { "chapter_title": "Introduction to Accounting", "table_id": "introduction_accounting_quiz", "section": "Commerce" },
+      { "chapter_title": "Theory Base of Accounting", "table_id": "theory_accounting_11_quiz", "section": "Commerce" },
+      { "chapter_title": "Recording of Transactions I", "table_id": "recording_i_11_quiz", "section": "Commerce" },
+      { "chapter_title": "Recording of Transactions II", "table_id": "recording_ii_11_quiz", "section": "Commerce" },
+      { "chapter_title": "Bank Reconciliation Statement", "table_id": "bank_statement_quiz", "section": "Commerce" },
+      { "chapter_title": "Trial Balance and Rectification of Errors", "table_id": "trial_errors_11_quiz", "section": "Commerce" },
+      { "chapter_title": "Depreciation, Provisions and Reserves", "table_id": "depreciation_reserves_11_quiz", "section": "Commerce" }
+    ],
+    "Financial Accounting Part II": [
+      { "chapter_title": "Accounting for Bills of Exchange", "table_id": "accounting_exchange_11_quiz", "section": "Commerce" },
+      { "chapter_title": "Financial Statements I", "table_id": "financial_i_11_quiz", "section": "Commerce" },
+      { "chapter_title": "Financial Statements II (With Adjustments)", "table_id": "financial_adjustments_11_quiz", "section": "Commerce" },
+      { "chapter_title": "Accounts from Incomplete Records", "table_id": "accounts_records_11_quiz", "section": "Commerce" },
+      { "chapter_title": "Computers in Accounting", "table_id": "computers_accounting_11_quiz", "section": "Commerce" }
+    ]
+  },
+
+  "Business Studies": {
+    "Business Studies Part I: Foundations of Business": [
+      { "chapter_title": "Evolution and Fundamentals of Business", "table_id": "evolution_business_11_quiz", "section": "Commerce" },
+      { "chapter_title": "Forms of Business Organisation", "table_id": "forms_organisation_11_quiz", "section": "Commerce" },
+      { "chapter_title": "Private, Public and Global Enterprises", "table_id": "Ch 3", "section": "Commerce" },
+      { "chapter_title": "Business Services", "table_id": "business_services_11_quiz", "section": "Commerce" },
+      { "chapter_title": "Emerging Modes of Business", "table_id": "emerging_business_11_quiz", "section": "Commerce" },
+      { "chapter_title": "Social Responsibility of Business and Business Ethics", "table_id": "social_ethics_11_quiz", "section": "Commerce" }
+    ],
+    "Business Studies Part II: Finance and Trade": [
+      { "chapter_title": "Sources of Business Finance", "table_id": "sources_finance_11_quiz", "section": "Commerce" },
+      { "chapter_title": "Small Business", "table_id": "small_business_11_quiz", "section": "Commerce" },
+      { "chapter_title": "Internal Trade", "table_id": "internal_trade_11_quiz", "section": "Commerce" },
+      { "chapter_title": "International Business", "table_id": "international_business_11_quiz", "section": "Commerce" }
+    ]
+  },
+
+  "Economics": {
+    "Statistics for Economics": [
+      { "chapter_title": "Introduction", "table_id": "statistics_introduction_11_quiz", "section": "Commerce" },
+      { "chapter_title": "Collection of Data", "table_id": "collection_data_11_quiz", "section": "Commerce" },
+      { "chapter_title": "Organisation of Data", "table_id": "organisation_data_11_quiz", "section": "Commerce" },
+      { "chapter_title": "Presentation of Data", "table_id": "presentation_data_11_quiz", "section": "Commerce" },
+      { "chapter_title": "Measures of Central Tendency", "table_id": "measures_tendency_11_quiz", "section": "Commerce" },
+      { "chapter_title": "Measures of Dispersion", "table_id": "measures_dispersion_11_quiz", "section": "Commerce" },
+      { "chapter_title": "Correlation", "table_id": "correlation_correlation_11_quiz", "section": "Commerce" },
+      { "chapter_title": "Index Numbers", "table_id": "index_numbers_11_quiz", "section": "Commerce" }
+    ],
+    "Introductory Microeconomics": [
+      { "chapter_title": "Introduction to Economics", "table_id": "microeconomics_introduction_11_quiz", "section": "Commerce" },
+      { "chapter_title": "Theory of Consumer Behaviour", "table_id": "theory_behaviour_11_quiz", "section": "Commerce" },
+      { "chapter_title": "Production and Costs", "table_id": "production_costs_11_quiz", "section": "Commerce" },
+      { "chapter_title": "The Theory of the Firm under Perfect Competition", "table_id": "theory_competition_11_quiz", "section": "Commerce" },
+      { "chapter_title": "Market Equilibrium", "table_id": "market_equilibrium_11_quiz", "section": "Commerce" },
+      { "chapter_title": "Non-Competitive Markets", "table_id": "non_markets_11_quiz", "section": "Commerce" }
+    ]
+  },
+
+  "Applied Mathematics": {
+    "Applied Mathematics Textbook for Class XI": [
+      { "chapter_title": "Numbers, Quantification and Numerical Applications", "table_id": "numbers_applications_11_quiz", "section": "Commerce" },
+      { "chapter_title": "Algebra", "table_id": "algebra_algebra_11_quiz", "section": "Commerce" },
+      { "chapter_title": "Mathematical Reasoning", "table_id": "mathematical_reasoning_11_quiz", "section": "Commerce" },
+      { "chapter_title": "Calculus", "table_id": "calculus_calculus_11_quiz", "section": "Commerce" },
+      { "chapter_title": "Probability", "table_id": "probability_probability_11_quiz", "section": "Commerce" },
+      { "chapter_title": "Descriptive Statistics", "table_id": "descriptive_statistics_11_quiz", "section": "Commerce" },
+      { "chapter_title": "Financial Mathematics", "table_id": "financial_mathematics_11_quiz", "section": "Commerce" },
+      { "chapter_title": "Coordinate Geometry", "table_id": "coordinate_geometry_11_quiz", "section": "Commerce" }
+    ]
+  },
+
+  "History": {
+    "Themes in World History": [
+      { "chapter_title": "Writing and City Life", "table_id": "writing_life_11_quiz", "section": "Humanities" },
+      { "chapter_title": "An Empire Across Three Continents", "table_id": "empire_continents_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Nomadic Empires", "table_id": "nomadic_empires_11_quiz", "section": "Humanities" },
+      { "chapter_title": "The Three Orders", "table_id": "three_orders_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Changing Cultural Traditions", "table_id": "changing_traditions_11_quiz", "section": "Humanities" },
+      { "chapter_title": "The Industrial Revolution", "table_id": "industrial_revolution_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Displacing Indigenous Peoples", "table_id": "displacing_peoples_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Paths to Modernisation", "table_id": "paths_modernisation_11_quiz", "section": "Humanities" }
+    ]
+  },
+
+  "Political Science": {
+    "Indian Constitution at Work": [
+      { "chapter_title": "Constitution: Why and How?", "table_id": "constitution_how_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Rights in the Indian Constitution", "table_id": "rights_constitution_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Election and Representation", "table_id": "election_representation_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Executive", "table_id": "executive_executive_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Legislature", "table_id": "legislature_legislature_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Judiciary", "table_id": "judiciary_judiciary_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Federalism", "table_id": "federalism_federalism_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Local Governments", "table_id": "local_governments_11_quiz", "section": "Humanities" }
+    ],
+    "Political Theory": [
+      { "chapter_title": "Political Theory: An Introduction", "table_id": "political_introduction_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Freedom", "table_id": "freedom_freedom_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Equality", "table_id": "equality_equality_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Social Justice", "table_id": "social_justice_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Rights", "table_id": "rights_rights_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Citizenship", "table_id": "citizenship_citizenship_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Nationalism", "table_id": "nationalism_nationalism_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Secularism", "table_id": "secularism_secularism_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Peace", "table_id": "peace_peace_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Development", "table_id": "development_development_11_quiz", "section": "Humanities" }
+    ]
+  },
+
+  "Sociology": {
+    "Introducing Sociology": [
+      { "chapter_title": "Sociology and Society", "table_id": "sociology_society_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Terms, Concepts and their Use in Sociology", "table_id": "terms_sociology_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Understanding Social Institutions", "table_id": "understanding_institutions_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Culture and Socialisation", "table_id": "culture_socialisation_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Doing Sociology: Research Methods", "table_id": "doing_methods_11_quiz", "section": "Humanities" }
+    ],
+    "Understanding Society": [
+      { "chapter_title": "Social Structure, Stratification and Social Processes in Society", "table_id": "social_structure_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Social Change and Social Order in Rural and Urban Society", "table_id": "social_society_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Environment and Society", "table_id": "environment_society_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Western Sociologists", "table_id": "western_sociologists_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Indian Sociologists", "table_id": "indian_sociologists_11_quiz", "section": "Humanities" }
+    ]
+  },
+
+  "Geography": {
+    "Fundamentals of Physical Geography": [
+      { "chapter_title": "Geography as a Discipline", "table_id": "as_discipline_11_quiz", "section": "Humanities" },
+      { "chapter_title": "The Earth", "table_id": "earth_earth_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Distribution of Oceans and Continents", "table_id": "distribution_continents_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Minerals and Rocks", "table_id": "minerals_rocks_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Geomorphic Processes", "table_id": "geomorphic_processes_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Landforms and their Evolution", "table_id": "landforms_evolution_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Composition and Structure of Atmosphere", "table_id": "composition_atmosphere_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Solar Radiation, Heat Balance and Temperature", "table_id": "solar_temperature_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Atmospheric Circulation and Weather Systems", "table_id": "atmospheric_systems_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Water in the Atmosphere", "table_id": "water_atmosphere_11_quiz", "section": "Humanities" },
+      { "chapter_title": "World Climate and Climate Change", "table_id": "world_change_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Water (Oceans)", "table_id": "water_oceans_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Life on the Earth (Biosphere)", "table_id": "life_biosphere_11_quiz", "section": "Humanities" }
+    ],
+    "India: Physical Environment": [
+      { "chapter_title": "Introduction", "table_id": "introduction_introduction_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Structure and Physiography", "table_id": "structure_physiography_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Drainage System", "table_id": "drainage_system_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Climate", "table_id": "climate_climate_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Natural Vegetation", "table_id": "natural_vegetation_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Soils", "table_id": "soils_soils_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Natural Hazards and Disasters", "table_id": "natural_disasters_11_quiz", "section": "Humanities" }
+    ],
+    "Practical Work in Geography Part I": [
+      { "chapter_title": "Introduction to Maps", "table_id": "introduction_maps_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Map Scales", "table_id": "map_scales_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Latitude, Longitude and Time", "table_id": "latitude_time_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Map Projections", "table_id": "map_projections_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Topographical Maps", "table_id": "topographical_maps_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Aerial Photographs", "table_id": "aerial_photographs_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Remote Sensing", "table_id": "remote_sensing_11_quiz", "section": "Humanities" },
+      { "chapter_title": "Geographical Information System (GIS)", "table_id": "geographical_gis_11_quiz", "section": "Humanities" }
+    ]
   }
-};
+}
 
 export default curriculum;
