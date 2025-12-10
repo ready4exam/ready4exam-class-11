@@ -51,75 +51,32 @@ function findCurriculumMatch(topicSlug) {
 }
 
 // ===========================================================
-// ⭐ SMART CASE-BASED PARSER (Non-destructive)
+// ⭐ MINIMAL NORMALIZER (Fixes ALL missing text/options issues)
 // ===========================================================
 function normalizeQuestion(q) {
-  const type = (q.question_type || "").toLowerCase();
-
-  let scenario = q.scenario_reason_text?.trim() || "";
-  let question = q.question_text?.trim() || "";
-
-  // If NOT Case-Based → return clean MCQ
-  if (!["case", "case-based"].includes(type)) {
-    return {
-      ...q,
-      text: question,
-      scenario_reason: "",
-      options: {
-        A: q.option_a || "",
-        B: q.option_b || "",
-        C: q.option_c || "",
-        D: q.option_d || "",
-      }
-    };
-  }
-
-  // ⚡ CASE-BASED AUTO FIXING LAYER
-  const combined = (scenario + "\n" + question).trim();
-
-  const qMatch = combined.match(
-    /(What|Which|When|Why|How|Calculate|Find|Determine|Answer|Choose|Select|Based on).*$/i
-  );
-
-  let finalScenario = scenario;
-  let finalQuestion = question;
-
-  if (qMatch) {
-    const idx = qMatch.index;
-    finalScenario = combined.substring(0, idx).trim();
-    finalQuestion = combined.substring(idx).trim();
-  } else {
-    const lastQmark = combined.lastIndexOf("?");
-    if (lastQmark !== -1) {
-      finalScenario = combined.substring(0, lastQmark).trim();
-      finalQuestion = combined.substring(lastQmark).trim();
-    } else {
-      finalScenario = combined;
-      finalQuestion = "Based on the above scenario, answer the question.";
-    }
-  }
-
-  // Remove stray question marks from scenario
-  if (/\?/.test(finalScenario)) {
-    const cut = finalScenario.lastIndexOf("?");
-    finalScenario = finalScenario.substring(0, cut).trim();
-  }
-
   return {
     ...q,
-    text: finalQuestion,
-    scenario_reason: finalScenario,
+
+    // UI expects lowercase
+    question_type: (q.question_type || "").toLowerCase(),
+
+    // Map Supabase columns → UI fields
+    text: q.question_text || "",
+    scenario_reason: q.scenario_reason_text || "",
+
     options: {
       A: q.option_a || "",
       B: q.option_b || "",
       C: q.option_c || "",
-      D: q.option_d || "",
-    }
+      D: q.option_d || ""
+    },
+
+    correct_answer: q.correct_answer_key || ""
   };
 }
 
 // ===========================================================
-// URL + HEADER FORMAT  ⭐ FINAL REQUEST IMPLEMENTED
+// URL + HEADER FORMAT
 // ===========================================================
 function parseUrlParameters(){
   const params=new URLSearchParams(location.search);
@@ -130,9 +87,6 @@ function parseUrlParameters(){
 
   const match = findCurriculumMatch(quizState.topicSlug);
 
-  // ------------------------------------------------------------------
-  //       🔥 NEW — CLEAN TITLE + WORKSHEET → NO "QUIZ" ANYWHERE
-  // ------------------------------------------------------------------
   if(!match){
     console.warn(`⚠ Fallback used for: ${quizState.topicSlug}`);
 
@@ -162,7 +116,8 @@ function parseUrlParameters(){
 // RENDERING + SUBMIT + STORAGE + EVENTS (unchanged)
 // ===========================================================
 function renderQuestion(){
-  const i=quizState.currentQuestionIndex, q=quizState.questions[i];
+  const i=quizState.currentQuestionIndex;
+  const q=quizState.questions[i];
   if(!q) return UI.showStatus("No question to display.");
   UI.renderQuestion(q, i+1, quizState.userAnswers[q.id], quizState.isSubmitted);
   UI.updateNavigation?.(i,quizState.questions.length,quizState.isSubmitted);
@@ -171,11 +126,17 @@ function renderQuestion(){
 
 function handleNavigation(d){
   const i=quizState.currentQuestionIndex+d;
-  if(i>=0 && i<quizState.questions.length){ quizState.currentQuestionIndex=i; renderQuestion(); }
+  if(i>=0 && i<quizState.questions.length){
+    quizState.currentQuestionIndex=i;
+    renderQuestion();
+  }
 }
 
 function handleAnswerSelection(id,opt){
-  if(!quizState.isSubmitted){ quizState.userAnswers[id]=opt; renderQuestion(); }
+  if(!quizState.isSubmitted){
+    quizState.userAnswers[id]=opt;
+    renderQuestion();
+  }
 }
 
 async function handleSubmit(){
@@ -197,7 +158,10 @@ async function handleSubmit(){
     user_answers: quizState.userAnswers,
   };
 
-  if(user){ try{ await saveResult(result); }catch(e){console.warn(e);} }
+  if(user){
+    try{ await saveResult(result); }
+    catch(e){ console.warn(e); }
+  }
 
   quizState.currentQuestionIndex=0;
   renderQuestion();
@@ -212,16 +176,20 @@ async function loadQuiz(){
     const q = await fetchQuestions(quizState.topicSlug, quizState.difficulty);
     if(!q?.length) throw new Error("No questions found.");
 
-    // ⭐ APPLY CASE-BASED PARSER HERE
-    quizState.questions = q.map(normalizeQuestion);
+    // ⭐ FIX: normalize everything for UI
+    const normalized = q.map(normalizeQuestion);
+    quizState.questions = normalized;
 
-    quizState.userAnswers = Object.fromEntries(q.map(x=>[x.id,null]));
+    // userAnswers based on normalized list
+    quizState.userAnswers = Object.fromEntries(
+      normalized.map(x => [x.id, null])
+    );
 
-    renderQuestion(); 
+    renderQuestion();
     UI.attachAnswerListeners?.(handleAnswerSelection);
     UI.showView?.("quiz-content");
-  }catch(e){ 
-    UI.showStatus(`Error: ${e.message}`,"text-red-600"); 
+  }catch(e){
+    UI.showStatus(`Error: ${e.message}`,"text-red-600");
   }
 }
 
@@ -232,23 +200,29 @@ async function onAuthChange(u){
 
 function attachDomEvents(){
   document.addEventListener("click",e=>{
-    const b=e.target.closest("button,a"); if(!b)return;
-    if(b.id==="prev-btn")return handleNavigation(-1);
-    if(b.id==="next-btn")return handleNavigation(1);
-    if(b.id==="submit-btn")return handleSubmit();
+    const b=e.target.closest("button,a");
+    if(!b) return;
+
+    if(b.id==="prev-btn") return handleNavigation(-1);
+    if(b.id==="next-btn") return handleNavigation(1);
+    if(b.id==="submit-btn") return handleSubmit();
+
     if(["login-btn","google-signin-btn","paywall-login-btn"].includes(b.id))
       return signInWithGoogle();
-    if(b.id==="logout-nav-btn")return signOut();
-    if(b.id==="back-to-chapters-btn")location.href="chapter-selection.html";
+
+    if(b.id==="logout-nav-btn") return signOut();
+
+    if(b.id==="back-to-chapters-btn")
+      location.href="chapter-selection.html";
   });
 }
 
 async function init(){
-  UI.initializeElements(); 
+  UI.initializeElements();
   parseUrlParameters();
-  await initializeServices(); 
+  await initializeServices();
   await initializeAuthListener(onAuthChange);
-  attachDomEvents(); 
+  attachDomEvents();
   UI.hideStatus();
 }
 
