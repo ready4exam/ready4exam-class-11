@@ -32,6 +32,10 @@ let quizState = {
   score: 0,
 };
 
+// DEBUG: Allow access in console (ONLY addition)
+window.quizState = quizState;
+
+
 // ===========================================================
 // SMART CHAPTER LOOKUP
 // ===========================================================
@@ -51,31 +55,6 @@ function findCurriculumMatch(topicSlug) {
 }
 
 // ===========================================================
-// ⭐ MINIMAL NORMALIZER (Fixes ALL missing text/options issues)
-// ===========================================================
-function normalizeQuestion(q) {
-  return {
-    ...q,
-
-    // UI expects lowercase
-    question_type: (q.question_type || "").toLowerCase(),
-
-    // Map Supabase columns → UI fields
-    text: q.question_text || "",
-    scenario_reason: q.scenario_reason_text || "",
-
-    options: {
-      A: q.option_a || "",
-      B: q.option_b || "",
-      C: q.option_c || "",
-      D: q.option_d || ""
-    },
-
-    correct_answer: q.correct_answer_key || ""
-  };
-}
-
-// ===========================================================
 // URL + HEADER FORMAT
 // ===========================================================
 function parseUrlParameters(){
@@ -87,6 +66,9 @@ function parseUrlParameters(){
 
   const match = findCurriculumMatch(quizState.topicSlug);
 
+  // ------------------------------------------------------------------
+  //     CLEAN TITLE (NO 'QUIZ' ANYWHERE)
+  // ------------------------------------------------------------------
   if(!match){
     console.warn(`⚠ Fallback used for: ${quizState.topicSlug}`);
 
@@ -103,6 +85,7 @@ function parseUrlParameters(){
     return;
   }
 
+  // 📌 Curriculum-linked chapter
   quizState.subject = match.subject;
   const chapter = match.title.replace(/quiz/ig,"").trim();
 
@@ -113,11 +96,10 @@ function parseUrlParameters(){
 }
 
 // ===========================================================
-// RENDERING + SUBMIT + STORAGE + EVENTS (unchanged)
+// RENDERING + SUBMIT + STORAGE + EVENTS
 // ===========================================================
 function renderQuestion(){
-  const i=quizState.currentQuestionIndex;
-  const q=quizState.questions[i];
+  const i=quizState.currentQuestionIndex, q=quizState.questions[i];
   if(!q) return UI.showStatus("No question to display.");
   UI.renderQuestion(q, i+1, quizState.userAnswers[q.id], quizState.isSubmitted);
   UI.updateNavigation?.(i,quizState.questions.length,quizState.isSubmitted);
@@ -159,7 +141,7 @@ async function handleSubmit(){
   };
 
   if(user){
-    try{ await saveResult(result); }
+    try { await saveResult(result); }
     catch(e){ console.warn(e); }
   }
 
@@ -173,23 +155,17 @@ async function handleSubmit(){
 async function loadQuiz(){
   try{
     UI.showStatus("Fetching questions...");
-    const q = await fetchQuestions(quizState.topicSlug, quizState.difficulty);
-    console.log("🔥 RAW SUPABASE ROWS (copy this and send to ChatGPT) →", JSON.parse(JSON.stringify(q)));
 
+    const q=await fetchQuestions(quizState.topicSlug,quizState.difficulty);
     if(!q?.length) throw new Error("No questions found.");
 
-    // ⭐ FIX: normalize everything for UI
-    const normalized = q.map(normalizeQuestion);
-    quizState.questions = normalized;
-
-    // userAnswers based on normalized list
-    quizState.userAnswers = Object.fromEntries(
-      normalized.map(x => [x.id, null])
-    );
+    quizState.questions=q;
+    quizState.userAnswers=Object.fromEntries(q.map(x=>[x.id,null]));
 
     renderQuestion();
     UI.attachAnswerListeners?.(handleAnswerSelection);
     UI.showView?.("quiz-content");
+
   }catch(e){
     UI.showStatus(`Error: ${e.message}`,"text-red-600");
   }
@@ -202,8 +178,7 @@ async function onAuthChange(u){
 
 function attachDomEvents(){
   document.addEventListener("click",e=>{
-    const b=e.target.closest("button,a");
-    if(!b) return;
+    const b=e.target.closest("button,a"); if(!b)return;
 
     if(b.id==="prev-btn") return handleNavigation(-1);
     if(b.id==="next-btn") return handleNavigation(1);
