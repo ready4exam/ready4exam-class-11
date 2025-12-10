@@ -153,23 +153,7 @@ export function renderQuestion(q, idxOneBased, selected, submitted) {
   initializeElements();
   if (!els.list) return;
 
-  /* ⭐⭐⭐⭐⭐ UNIVERSAL NORMALIZER — ONLY CHANGE MADE ⭐⭐⭐⭐⭐ */
-  q = {
-    id: q.id,
-    question_type: (q.question_type || "").toLowerCase(),
-    text: q.text || q.question_text || "",
-    scenario_reason: q.scenario_reason || q.scenario_reason_text || "",
-    explanation: q.explanation || "",
-    options: {
-      A: q.options?.A || q.option_a || "",
-      B: q.options?.B || q.option_b || "",
-      C: q.options?.C || q.option_c || "",
-      D: q.options?.D || q.option_d || "",
-    },
-    correct_answer: q.correct_answer || q.correct_answer_key || "",
-  };
-
-  const type = q.question_type;
+  const type = (q.question_type || "").toLowerCase();
 
   /* ================== ASSERTION-REASON ================== */
   if (type === "ar") {
@@ -302,7 +286,7 @@ export function renderQuestion(q, idxOneBased, selected, submitted) {
       let cls = "option-label flex items-start p-3 border-2 rounded-lg cursor-pointer transition";
       if (isCorrect) cls += " border-green-600 bg-green-50";
       else if (isWrong) cls += " border-red-600 bg-red-50";
-      else if (isSel) cls += " border-blue-50 border-blue-500";
+      else if (isSel) cls += " border-blue-500 bg-blue-50";
 
       return `
         <label class="block">
@@ -322,7 +306,7 @@ export function renderQuestion(q, idxOneBased, selected, submitted) {
         : "";
 
     els.list.innerHTML = `
-      <div class="grid grid-cols-1 md-grid-cols-2 gap-6 items-start">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
         <div class="p-4 bg-gray-50 rounded-lg border border-gray-200 max-h-64 overflow-y-auto">
           <h3 class="font-semibold mb-2 text-gray-900">Scenario</h3>
           <p class="text-gray-800 text-sm md:text-base whitespace-pre-line">${scenarioText}</p>
@@ -343,14 +327,14 @@ export function renderQuestion(q, idxOneBased, selected, submitted) {
   const qText = cleanKatexMarkers(q.text || "");
   let reasonRaw = q.explanation || q.scenario_reason || "";
   const reason = normalizeReasonText(cleanKatexMarkers(reasonRaw));
-  const label = "Reasoning (R)";
+  const label = type === "case" ? "Context" : "Reasoning (R)";
 
   const reasonHtml =
-    reason && !submitted
+    (type === "ar" || type === "case") && reason && !submitted
       ? `<p class="text-gray-700 mt-2 mb-3">${label}: ${reason}</p>` : "";
 
   const submittedExplanationHtml =
-    submitted && reason
+    submitted && (type === "ar" || type === "case") && reason
       ? `<div class="mt-3 p-3 bg-gray-50 rounded text-gray-700 border border-gray-100"><b>${label}:</b> ${reason}</div>` : "";
 
   const optionsHtml = ["A", "B", "C", "D"].map(opt => {
@@ -432,6 +416,8 @@ export function renderAllQuestionsForReview(questions, userAnswers = {}) {
   const html = questions.map((q, i) => {
     const txt = cleanKatexMarkers(q.text || "");
     const reason = normalizeReasonText(cleanKatexMarkers(q.explanation || ""));
+    const isCase = q.question_type?.toLowerCase() === "case";
+    const label = isCase ? "Context" : "Reasoning (R)";
     const ua = userAnswers[q.id] || "-";
     const ca = q.correct_answer || "-";
     const correct = ua && ua.toUpperCase() === ca.toUpperCase();
@@ -439,7 +425,7 @@ export function renderAllQuestionsForReview(questions, userAnswers = {}) {
     return `
       <div class="mb-6 p-4 bg-white rounded-lg border border-gray-100 shadow-sm">
         <p class="font-bold text-lg mb-1">Q${i + 1}: ${txt}</p>
-        ${reason ? `<p class="text-gray-700 mb-2">Reasoning (R): ${reason}</p>` : ""}
+        ${reason ? `<p class="text-gray-700 mb-2">${label}: ${reason}</p>` : ""}
         <p>Your Answer: <span class="${correct?"text-green-600":"text-red-600"} font-semibold">${ua}</span></p>
         <p>Correct Answer: <b class="text-green-700">${ca}</b></p>
       </div>`;
