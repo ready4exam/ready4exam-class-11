@@ -5,7 +5,6 @@
 // - Clean fallback → Solid State Worksheet (no "quiz", title-cased)
 // -----------------------------------------------------------------------------
 
-
 import { initializeServices, getAuthUser } from "./config.js";
 import { fetchQuestions, saveResult } from "./api.js";
 import * as UI from "./ui-renderer.js";
@@ -15,10 +14,8 @@ import {
 } from "./auth-paywall.js";
 import curriculumData from "./curriculum.js";
 
-
 // 🔥 Injected at automation time — DO NOT HARD CODE
 const CLASS_ID = "11";
-
 
 // ===========================================================
 // STATE
@@ -34,7 +31,6 @@ let quizState = {
   isSubmitted: false,
   score: 0,
 };
-
 
 // ===========================================================
 // SMART CHAPTER LOOKUP
@@ -54,6 +50,73 @@ function findCurriculumMatch(topicSlug) {
   return null;
 }
 
+// ===========================================================
+// ⭐ SMART CASE-BASED PARSER (Non-destructive)
+// ===========================================================
+function normalizeQuestion(q) {
+  const type = (q.question_type || "").toLowerCase();
+
+  let scenario = q.scenario_reason_text?.trim() || "";
+  let question = q.question_text?.trim() || "";
+
+  // If NOT Case-Based → return clean MCQ
+  if (!["case", "case-based"].includes(type)) {
+    return {
+      ...q,
+      text: question,
+      scenario_reason: "",
+      options: {
+        A: q.option_a || "",
+        B: q.option_b || "",
+        C: q.option_c || "",
+        D: q.option_d || "",
+      }
+    };
+  }
+
+  // ⚡ CASE-BASED AUTO FIXING LAYER
+  const combined = (scenario + "\n" + question).trim();
+
+  const qMatch = combined.match(
+    /(What|Which|When|Why|How|Calculate|Find|Determine|Answer|Choose|Select|Based on).*$/i
+  );
+
+  let finalScenario = scenario;
+  let finalQuestion = question;
+
+  if (qMatch) {
+    const idx = qMatch.index;
+    finalScenario = combined.substring(0, idx).trim();
+    finalQuestion = combined.substring(idx).trim();
+  } else {
+    const lastQmark = combined.lastIndexOf("?");
+    if (lastQmark !== -1) {
+      finalScenario = combined.substring(0, lastQmark).trim();
+      finalQuestion = combined.substring(lastQmark).trim();
+    } else {
+      finalScenario = combined;
+      finalQuestion = "Based on the above scenario, answer the question.";
+    }
+  }
+
+  // Remove stray question marks from scenario
+  if (/\?/.test(finalScenario)) {
+    const cut = finalScenario.lastIndexOf("?");
+    finalScenario = finalScenario.substring(0, cut).trim();
+  }
+
+  return {
+    ...q,
+    text: finalQuestion,
+    scenario_reason: finalScenario,
+    options: {
+      A: q.option_a || "",
+      B: q.option_b || "",
+      C: q.option_c || "",
+      D: q.option_d || "",
+    }
+  };
+}
 
 // ===========================================================
 // URL + HEADER FORMAT  ⭐ FINAL REQUEST IMPLEMENTED
@@ -67,7 +130,6 @@ function parseUrlParameters(){
 
   const match = findCurriculumMatch(quizState.topicSlug);
 
-
   // ------------------------------------------------------------------
   //       🔥 NEW — CLEAN TITLE + WORKSHEET → NO "QUIZ" ANYWHERE
   // ------------------------------------------------------------------
@@ -77,19 +139,16 @@ function parseUrlParameters(){
     quizState.subject="General";
 
     const pretty = quizState.topicSlug
-      .replace(/_/g," ")          // solid_state → solid state
-      .replace(/quiz/ig,"")       // remove quiz
-      .replace(/[0-9]/g,"")       // remove numeric suffixes
+      .replace(/_/g," ")
+      .replace(/quiz/ig,"")
+      .replace(/[0-9]/g,"")
       .trim()
-      .replace(/\b\w/g,c=>c.toUpperCase()); // → Title Case
+      .replace(/\b\w/g,c=>c.toUpperCase());
 
     UI.updateHeader(`Class ${CLASS_ID}: ${pretty} Worksheet`, quizState.difficulty);
     return;
   }
-  // ------------------------------------------------------------------
 
-
-  // 📌 Curriculum linked chapter → Final title format
   quizState.subject = match.subject;
   const chapter = match.title.replace(/quiz/ig,"").trim();
 
@@ -98,7 +157,6 @@ function parseUrlParameters(){
     quizState.difficulty
   );
 }
-
 
 // ===========================================================
 // RENDERING + SUBMIT + STORAGE + EVENTS (unchanged)
@@ -151,15 +209,20 @@ async function handleSubmit(){
 async function loadQuiz(){
   try{
     UI.showStatus("Fetching questions...");
-    const q=await fetchQuestions(quizState.topicSlug,quizState.difficulty);
+    const q = await fetchQuestions(quizState.topicSlug, quizState.difficulty);
     if(!q?.length) throw new Error("No questions found.");
 
-    quizState.questions=q;
-    quizState.userAnswers=Object.fromEntries(q.map(x=>[x.id,null]));
+    // ⭐ APPLY CASE-BASED PARSER HERE
+    quizState.questions = q.map(normalizeQuestion);
 
-    renderQuestion(); UI.attachAnswerListeners?.(handleAnswerSelection);
+    quizState.userAnswers = Object.fromEntries(q.map(x=>[x.id,null]));
+
+    renderQuestion(); 
+    UI.attachAnswerListeners?.(handleAnswerSelection);
     UI.showView?.("quiz-content");
-  }catch(e){ UI.showStatus(`Error: ${e.message}`,"text-red-600"); }
+  }catch(e){ 
+    UI.showStatus(`Error: ${e.message}`,"text-red-600"); 
+  }
 }
 
 async function onAuthChange(u){
@@ -181,9 +244,12 @@ function attachDomEvents(){
 }
 
 async function init(){
-  UI.initializeElements(); parseUrlParameters();
-  await initializeServices(); await initializeAuthListener(onAuthChange);
-  attachDomEvents(); UI.hideStatus();
+  UI.initializeElements(); 
+  parseUrlParameters();
+  await initializeServices(); 
+  await initializeAuthListener(onAuthChange);
+  attachDomEvents(); 
+  UI.hideStatus();
 }
 
 document.addEventListener("DOMContentLoaded", init);
