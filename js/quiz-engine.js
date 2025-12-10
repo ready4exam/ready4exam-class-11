@@ -174,6 +174,8 @@ async function loadQuiz(){
   try{
     UI.showStatus("Fetching questions...");
     const q = await fetchQuestions(quizState.topicSlug, quizState.difficulty);
+    console.log("🔥 RAW SUPABASE ROWS (copy this and send to ChatGPT) →", JSON.parse(JSON.stringify(q)));
+
     if(!q?.length) throw new Error("No questions found.");
 
     // ⭐ FIX: normalize everything for UI
