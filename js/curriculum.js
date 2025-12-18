@@ -89,7 +89,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Structure of Atom",
-        "table_id": "structure_atom_quiz",
+        "table_id": "chemistry_structure_atom_11_quiz",
         "section": "Science"
       },
       {
