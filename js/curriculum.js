@@ -18,7 +18,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Motion in a Plane",
-        "table_id": "motion_plane_quiz",
+        "table_id": "physics_motion_plane_11_quiz",
         "section": "Science"
       },
       {
