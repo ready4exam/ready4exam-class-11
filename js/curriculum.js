@@ -109,7 +109,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Equilibrium",
-        "table_id": "equilibrium_equilibrium_quiz",
+        "table_id": "chemistry_equilibrium_equilibrium_11_quiz",
         "section": "Science"
       }
     ],
