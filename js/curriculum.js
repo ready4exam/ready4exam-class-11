@@ -8,7 +8,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Units and Measurements",
-        "table_id": "units_measurements_quiz",
+        "table_id": "physics_units_measurements_11_quiz",
         "section": "Science"
       },
       {
