@@ -75,7 +75,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Waves",
-        "table_id": "Ch 8",
+        "table_id": "physics_waves_waves_11_quiz",
         "section": "Science"
       }
     ]
