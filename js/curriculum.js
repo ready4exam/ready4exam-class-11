@@ -94,7 +94,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Classification of Elements and Periodicity in Properties",
-        "table_id": "classification_properties_quiz",
+        "table_id": "chemistry_classification_properties_11_quiz",
         "section": "Science"
       },
       {
