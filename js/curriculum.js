@@ -55,7 +55,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Thermal Properties of Matter",
-        "table_id": "Ch 4",
+        "table_id": "physics_thermal_matter_11_quiz",
         "section": "Science"
       },
       {
