@@ -40,7 +40,7 @@ export const curriculum = {
     "Physics Part II": [
       {
         "chapter_title": "Gravitation",
-        "table_id": "Ch 1",
+        "table_id": "physics_gravitation_gravitation_11_quiz",
         "section": "Science"
       },
       {
