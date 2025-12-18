@@ -70,7 +70,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Oscillations",
-        "table_id": "Ch 7",
+        "table_id": "physics_oscillations_oscillations_11_quiz",
         "section": "Science"
       },
       {
