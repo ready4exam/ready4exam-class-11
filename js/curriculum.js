@@ -50,7 +50,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Mechanical Properties of Fluids",
-        "table_id": "Ch 3",
+        "table_id": "physics_mechanical_fluids_11_quiz",
         "section": "Science"
       },
       {
