@@ -33,7 +33,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "System of Particles and Rotational Motion",
-        "table_id": "Ch 7",
+        "table_id": "physics_system_motion_11_quiz",
         "section": "Science"
       }
     ],
