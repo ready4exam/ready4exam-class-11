@@ -45,7 +45,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Mechanical Properties of Solids",
-        "table_id": "Ch 2",
+        "table_id": "physics_mechanical_solids_11_quiz",
         "section": "Science"
       },
       {
