@@ -65,7 +65,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Kinetic Theory",
-        "table_id": "Ch 6",
+        "table_id": "physics_kinetic_theory_11_quiz",
         "section": "Science"
       },
       {
