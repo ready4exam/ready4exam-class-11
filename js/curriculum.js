@@ -84,7 +84,7 @@ export const curriculum = {
     "Chemistry Part I": [
       {
         "chapter_title": "Some Basic Concepts of Chemistry",
-        "table_id": "some_chemistry_quiz",
+        "table_id": "chemistry_some_chemistry_11_quiz",
         "section": "Science"
       },
       {
