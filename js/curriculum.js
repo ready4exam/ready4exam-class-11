@@ -341,7 +341,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Probability",
-        "table_id": "probability_probability_11_quiz",
+        "table_id": "mathematics_probability_probability_11_quiz",
         "section": "Science/Commerce"
       }
     ]
