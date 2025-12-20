@@ -136,7 +136,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Organic Chemistry - Some Basic Principles and Techniques",
-        "table_id": "Ch 5",
+        "table_id": "chemistry_organic_techniques_11_quiz",
         "section": "Science"
       },
       {
