@@ -121,7 +121,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Hydrogen",
-        "table_id": "hydrogen_hydrogen_quiz",
+        "table_id": "chemistry_hydrogen_hydrogen_11_quiz",
         "section": "Science"
       },
       {
