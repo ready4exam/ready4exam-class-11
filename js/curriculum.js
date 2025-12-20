@@ -141,7 +141,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Hydrocarbons",
-        "table_id": "Ch 6",
+        "table_id": "chemistry_hydrocarbons_hydrocarbons_11_quiz",
         "section": "Science"
       }
     ]
