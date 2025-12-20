@@ -205,7 +205,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Mineral Nutrition",
-        "table_id": "mineral_nutrition_11_quiz",
+        "table_id": "biology_mineral_nutrition_11_quiz",
         "section": "Science"
       },
       {
