@@ -170,7 +170,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Morphology of Flowering Plants",
-        "table_id": "morphology_plants_11_quiz",
+        "table_id": "biology_morphology_plants_11_quiz",
         "section": "Science"
       },
       {
