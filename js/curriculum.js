@@ -225,7 +225,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Digestion and Absorption",
-        "table_id": "digestion_absorption_11_quiz",
+        "table_id": "biology_digestion_absorption_11_quiz",
         "section": "Science"
       },
       {
