@@ -284,7 +284,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Complex Numbers and Quadratic Equations",
-        "table_id": "complex_equations_11_quiz",
+        "table_id": "mathematics_complex_equations_11_quiz",
         "section": "Science/Commerce"
       },
       {
