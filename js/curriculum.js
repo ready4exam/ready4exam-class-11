@@ -350,7 +350,7 @@ export const curriculum = {
     "Applied Mathematics Textbook for Class XI": [
       {
         "chapter_title": "Numbers, Quantification and Numerical Applications",
-        "table_id": "numbers_applications_quiz",
+        "table_id": "applied_numbers_applications_11_quiz",
         "section": "Commerce"
       },
       {
