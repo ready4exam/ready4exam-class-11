@@ -294,7 +294,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Permutations and Combinations",
-        "table_id": "permutations_combinations_quiz",
+        "table_id": "mathematics_permutations_combinations_11_quiz",
         "section": "Science/Commerce"
       },
       {
