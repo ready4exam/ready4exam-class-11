@@ -311,7 +311,7 @@ export const curriculum = {
     "Mathematics Part II": [
       {
         "chapter_title": "Straight Lines",
-        "table_id": "straight_lines_11_quiz",
+        "table_id": "mathematics_straight_lines_11_quiz",
         "section": "Science/Commerce"
       },
       {
