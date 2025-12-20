@@ -200,7 +200,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Transport in Plants",
-        "table_id": "transport_plants_11_quiz",
+        "table_id": "biology_transport_plants_11_quiz",
         "section": "Science"
       },
       {
