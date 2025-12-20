@@ -155,7 +155,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Biological Classification",
-        "table_id": "biological_classification_11_quiz",
+        "table_id": "biology_biological_classification_11_quiz",
         "section": "Science"
       },
       {
