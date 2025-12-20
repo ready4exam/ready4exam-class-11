@@ -289,7 +289,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Linear Inequalities",
-        "table_id": "linear_inequalities_11_quiz",
+        "table_id": "mathematics_linear_inequalities_11_quiz",
         "section": "Science/Commerce"
       },
       {
