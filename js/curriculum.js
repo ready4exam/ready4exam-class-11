@@ -240,7 +240,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Excretory Products and their Elimination",
-        "table_id": "excretory_elimination_11_quiz",
+        "table_id": "biology_excretory_elimination_11_quiz",
         "section": "Science"
       },
       {
