@@ -321,7 +321,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Introduction to Three Dimensional Geometry",
-        "table_id": "introduction_geometry_11_quiz",
+        "table_id": "mathematics_introduction_geometry_11_quiz",
         "section": "Science/Commerce"
       },
       {
