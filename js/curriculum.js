@@ -279,7 +279,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Principle of Mathematical Induction",
-        "table_id": "principle_induction_11_quiz",
+        "table_id": "mathematics_principle_induction_11_quiz",
         "section": "Science/Commerce"
       },
       {
