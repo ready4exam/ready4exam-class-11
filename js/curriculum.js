@@ -255,7 +255,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Chemical Coordination and Integration",
-        "table_id": "chemical_integration_11_quiz",
+        "table_id": "biology_chemical_integration_11_quiz",
         "section": "Science"
       }
     ]
