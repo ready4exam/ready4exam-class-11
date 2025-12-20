@@ -264,7 +264,7 @@ export const curriculum = {
     "Mathematics Part I": [
       {
         "chapter_title": "Sets",
-        "table_id": "sets_sets_11_quiz",
+        "table_id": "mathematics_sets_sets_11_quiz",
         "section": "Science/Commerce"
       },
       {
