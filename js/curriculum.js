@@ -210,7 +210,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Photosynthesis in Higher Plants",
-        "table_id": "photosynthesis_plants_11_quiz",
+        "table_id": "biology_photosynthesis_plants_11_quiz",
         "section": "Science"
       },
       {
