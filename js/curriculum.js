@@ -245,7 +245,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Locomotion and Movement",
-        "table_id": "locomotion_movement_11_quiz",
+        "table_id": "biology_locomotion_movement_11_quiz",
         "section": "Science"
       },
       {
