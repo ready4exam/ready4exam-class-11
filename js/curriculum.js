@@ -274,7 +274,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Trigonometric Functions",
-        "table_id": "trigonometric_functions_11_quiz",
+        "table_id": "mathematics_trigonometric_functions_11_quiz",
         "section": "Science/Commerce"
       },
       {
