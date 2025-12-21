@@ -566,7 +566,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Emerging Modes of Business",
-        "table_id": "emerging_business_11_quiz",
+        "table_id": "business_emerging_business_11_quiz",
         "section": "Commerce"
       },
       {
