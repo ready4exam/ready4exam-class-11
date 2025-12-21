@@ -578,7 +578,7 @@ export const curriculum = {
     "Business Studies Part II: Finance and Trade": [
       {
         "chapter_title": "Sources of Business Finance",
-        "table_id": "sources_finance_11_quiz",
+        "table_id": "business_sources_finance_11_quiz",
         "section": "Commerce"
       },
       {
