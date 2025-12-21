@@ -370,7 +370,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Descriptive Statistics",
-        "table_id": "descriptive_statistics_11_quiz",
+        "table_id": "applied_descriptive_statistics_11_quiz",
         "section": "Commerce"
       },
       {
