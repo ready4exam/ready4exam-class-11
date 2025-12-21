@@ -103,11 +103,6 @@ export const curriculum = {
         "section": "Science"
       },
       {
-        "chapter_title": "Thermodynamics",
-        "table_id": "thermodynamics_thermodynamics_quiz",
-        "section": "Science"
-      },
-      {
         "chapter_title": "Equilibrium",
         "table_id": "equilibrium_equilibrium_quiz",
         "section": "Science"
