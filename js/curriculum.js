@@ -537,7 +537,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Computers in Accounting",
-        "table_id": "computers_accounting_11_quiz",
+        "table_id": "accountancy_computers_accounting_11_quiz",
         "section": "Commerce"
       }
     ]
