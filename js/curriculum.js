@@ -485,7 +485,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Theory Base of Accounting",
-        "table_id": "theory_accounting_11_quiz",
+        "table_id": "accountancy_theory_accounting_11_quiz",
         "section": "Commerce"
       },
       {
