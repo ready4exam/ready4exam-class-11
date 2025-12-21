@@ -380,7 +380,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Coordinate Geometry",
-        "table_id": "coordinate_geometry_11_quiz",
+        "table_id": "applied_coordinate_geometry_11_quiz",
         "section": "Commerce"
       }
     ]
