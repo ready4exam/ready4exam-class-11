@@ -522,7 +522,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Financial Statements I",
-        "table_id": "financial_statements_i_11_quiz",
+        "table_id": "accountancy_financial_i_11_quiz",
         "section": "Commerce"
       },
       {
