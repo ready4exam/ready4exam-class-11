@@ -365,7 +365,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Probability",
-        "table_id": "probability_probability_11_quiz",
+        "table_id": "applied_probability_probability_11_quiz",
         "section": "Commerce"
       },
       {
