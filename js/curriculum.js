@@ -490,7 +490,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Recording of Transactions I",
-        "table_id": "recording_transactions_i_11_quiz",
+        "table_id": "accountancy_recording_i_11_quiz",
         "section": "Commerce"
       },
       {
