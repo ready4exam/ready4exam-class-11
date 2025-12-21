@@ -311,7 +311,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Conic Sections",
-        "table_id": "conic_sections_11_quiz",
+        "table_id": "mathematics_conic_sections_11_quiz",
         "section": "Science/Commerce"
       },
       {
