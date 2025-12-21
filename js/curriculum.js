@@ -480,7 +480,7 @@ export const curriculum = {
     "Financial Accounting Part I": [
       {
         "chapter_title": "Introduction to Accounting",
-        "table_id": "introduction_accounting_quiz",
+        "table_id": "accountancy_introduction_accounting_11_quiz",
         "section": "Commerce"
       },
       {
