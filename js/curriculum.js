@@ -350,7 +350,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Algebra",
-        "table_id": "algebra_algebra_quiz",
+        "table_id": "applied_algebra_algebra_11_quiz",
         "section": "Commerce"
       },
       {
