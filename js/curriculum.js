@@ -505,7 +505,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Trial Balance and Rectification of Errors",
-        "table_id": "trial_errors_11_quiz",
+        "table_id": "accountancy_trial_errors_11_quiz",
         "section": "Commerce"
       },
       {
