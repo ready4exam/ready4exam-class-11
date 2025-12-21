@@ -556,7 +556,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Private, Public and Global Enterprises",
-        "table_id": "Ch 3",
+        "table_id": "business_private_enterprises_11_quiz",
         "section": "Commerce"
       },
       {
