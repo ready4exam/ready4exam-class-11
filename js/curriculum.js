@@ -546,7 +546,7 @@ export const curriculum = {
     "Business Studies Part I: Foundations of Business": [
       {
         "chapter_title": "Evolution and Fundamentals of Business",
-        "table_id": "evolution_business_11_quiz",
+        "table_id": "business_evolution_business_11_quiz",
         "section": "Commerce"
       },
       {
