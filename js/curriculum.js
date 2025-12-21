@@ -551,7 +551,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Forms of Business Organisation",
-        "table_id": "forms_organisation_11_quiz",
+        "table_id": "business_forms_organisation_11_quiz",
         "section": "Commerce"
       },
       {
