@@ -583,7 +583,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Small Business",
-        "table_id": "small_business_11_quiz",
+        "table_id": "business_small_business_11_quiz",
         "section": "Commerce"
       },
       {
