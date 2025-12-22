@@ -750,7 +750,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Legislature",
-        "table_id": "legislature_legislature_11_quiz",
+        "table_id": "political_legislature_legislature_11_quiz",
         "section": "Humanities"
       },
       {
