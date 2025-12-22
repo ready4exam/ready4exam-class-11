@@ -755,7 +755,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Judiciary",
-        "table_id": "judiciary_judiciary_11_quiz",
+        "table_id": "political_judiciary_judiciary_11_quiz",
         "section": "Humanities"
       },
       {
