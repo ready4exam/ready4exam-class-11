@@ -730,7 +730,7 @@ export const curriculum = {
     "Indian Constitution at Work": [
       {
         "chapter_title": "Constitution: Why and How?",
-        "table_id": "constitution_how_11_quiz",
+        "table_id": "political_constitution_how_11_quiz",
         "section": "Humanities"
       },
       {
