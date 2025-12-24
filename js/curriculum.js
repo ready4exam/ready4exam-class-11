@@ -627,7 +627,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Measures of Central Tendency",
-        "table_id": "Ch 5",
+        "table_id": "economics_measures_tendency_11_quiz",
         "section": "Commerce"
       },
       {
