@@ -838,7 +838,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "An Empire Across Three Continents",
-        "table_id": "empire_continents_11_quiz",
+        "table_id": "history_empire_continents_11_quiz",
         "section": "Humanities"
       },
       {
