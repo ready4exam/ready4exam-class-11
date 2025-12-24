@@ -848,7 +848,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "The Three Orders",
-        "table_id": "three_orders_11_quiz",
+        "table_id": "history_three_orders_11_quiz",
         "section": "Humanities"
       },
       {
