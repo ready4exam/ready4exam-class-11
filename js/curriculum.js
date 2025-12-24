@@ -1035,7 +1035,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Understanding Social Institutions",
-        "table_id": "understanding_institutions_quiz",
+        "table_id": "sociology_understanding_institutions_11_quiz",
         "section": "Humanities"
       },
       {
