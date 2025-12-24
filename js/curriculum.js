@@ -632,7 +632,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Measures of Dispersion",
-        "table_id": "Ch 6",
+        "table_id": "economics_measures_dispersion_11_quiz",
         "section": "Commerce"
       },
       {
