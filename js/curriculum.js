@@ -804,7 +804,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Sensory, Attentional and Perceptual Processes",
-        "table_id": "Ch 5",
+        "table_id": "psychology_sensory_processes_11_quiz",
         "section": "Humanities"
       },
       {
