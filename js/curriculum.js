@@ -686,7 +686,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Indian Economy (1950–1990)",
-        "table_id": "Ch 2",
+        "table_id": "economics_indian_1990_11_quiz",
         "section": "Commerce"
       },
       {
