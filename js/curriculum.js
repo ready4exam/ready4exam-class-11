@@ -794,7 +794,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "The Bases of Human Behaviour",
-        "table_id": "Ch 3",
+        "table_id": "psychology_bases_behaviour_11_quiz",
         "section": "Humanities"
       },
       {
