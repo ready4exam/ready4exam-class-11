@@ -674,7 +674,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Forms of Market",
-        "table_id": "Ch 9",
+        "table_id": "economics_forms_market_11_quiz",
         "section": "Commerce"
       }
     ],
