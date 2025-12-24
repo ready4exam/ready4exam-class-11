@@ -784,7 +784,7 @@ export const curriculum = {
     "Psychology": [
       {
         "chapter_title": "What is Psychology?",
-        "table_id": "Ch 1",
+        "table_id": "psychology_what_psychology_11_quiz",
         "section": "Humanities"
       },
       {
