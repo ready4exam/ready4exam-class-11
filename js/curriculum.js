@@ -853,7 +853,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Changing Cultural Traditions",
-        "table_id": "changing_traditions_11_quiz",
+        "table_id": "history_changing_traditions_11_quiz",
         "section": "Humanities"
       },
       {
