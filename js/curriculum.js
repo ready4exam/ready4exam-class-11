@@ -617,7 +617,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Organisation of Data",
-        "table_id": "Ch 3",
+        "table_id": "economics_organisation_data_11_quiz",
         "section": "Commerce"
       },
       {
