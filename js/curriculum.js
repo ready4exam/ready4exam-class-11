@@ -607,7 +607,7 @@ export const curriculum = {
     "Statistics for Economics": [
       {
         "chapter_title": "Introduction",
-        "table_id": "Ch 1",
+        "table_id": "economics_introduction_introduction_11_quiz",
         "section": "Commerce"
       },
       {
