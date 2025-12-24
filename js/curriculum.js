@@ -622,7 +622,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Presentation of Data",
-        "table_id": "Ch 4",
+        "table_id": "economics_presentation_data_11_quiz",
         "section": "Commerce"
       },
       {
