@@ -654,7 +654,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Theory of Consumer Behaviour / Consumer's Equilibrium",
-        "table_id": "theory_behaviour_quiz",
+        "table_id": "economics_theory_equilibrium_11_quiz",
         "section": "Commerce"
       },
       {
