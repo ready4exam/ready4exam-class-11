@@ -799,7 +799,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Human Development",
-        "table_id": "Ch 4",
+        "table_id": "psychology_human_development_11_quiz",
         "section": "Humanities"
       },
       {
