@@ -809,7 +809,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Learning",
-        "table_id": "Ch 6",
+        "table_id": "psychology_learning_learning_11_quiz",
         "section": "Humanities"
       },
       {
