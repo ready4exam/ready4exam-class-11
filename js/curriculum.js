@@ -1025,7 +1025,7 @@ export const curriculum = {
     "Introducing Sociology": [
       {
         "chapter_title": "Sociology and Society",
-        "table_id": "sociology_society_quiz",
+        "table_id": "sociology_sociology_society_11_quiz",
         "section": "Humanities"
       },
       {
