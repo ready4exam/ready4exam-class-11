@@ -664,7 +664,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Theory of Supply",
-        "table_id": "Ch 7",
+        "table_id": "economics_theory_supply_11_quiz",
         "section": "Commerce"
       },
       {
