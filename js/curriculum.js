@@ -659,7 +659,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Production and Costs / Production Function",
-        "table_id": "production_costs_quiz",
+        "table_id": "economics_production_function_11_quiz",
         "section": "Commerce"
       },
       {
