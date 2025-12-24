@@ -1030,7 +1030,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Terms, Concepts and their Use in Sociology",
-        "table_id": "terms_sociology_quiz",
+        "table_id": "sociology_terms_sociology_11_quiz",
         "section": "Humanities"
       },
       {
