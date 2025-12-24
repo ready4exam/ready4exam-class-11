@@ -824,7 +824,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Motivation and Emotion",
-        "table_id": "Ch 9",
+        "table_id": "psychology_motivation_emotion_11_quiz",
         "section": "Humanities"
       }
     ]
