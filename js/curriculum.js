@@ -833,7 +833,7 @@ export const curriculum = {
     "Themes in World History": [
       {
         "chapter_title": "Writing and City Life",
-        "table_id": "writing_life_11_quiz",
+        "table_id": "history_writing_life_11_quiz",
         "section": "Humanities"
       },
       {
