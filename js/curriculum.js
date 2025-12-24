@@ -1045,7 +1045,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Doing Sociology: Research Methods",
-        "table_id": "doing_methods_quiz",
+        "table_id": "sociology_doing_methods_11_quiz",
         "section": "Humanities"
       }
     ],
