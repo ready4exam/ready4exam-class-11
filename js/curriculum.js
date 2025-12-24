@@ -642,7 +642,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Index Numbers",
-        "table_id": "Ch 8",
+        "table_id": "economics_index_numbers_11_quiz",
         "section": "Commerce"
       }
     ],
