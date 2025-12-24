@@ -681,7 +681,7 @@ export const curriculum = {
     "Indian Economic Development": [
       {
         "chapter_title": "Indian Economy on the Eve of Independence",
-        "table_id": "Ch 1",
+        "table_id": "economics_indian_independence_11_quiz",
         "section": "Commerce"
       },
       {
