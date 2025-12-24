@@ -843,7 +843,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Nomadic Empires",
-        "table_id": "nomadic_empires_11_quiz",
+        "table_id": "history_nomadic_empires_11_quiz",
         "section": "Humanities"
       },
       {
