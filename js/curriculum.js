@@ -669,7 +669,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Market Equilibrium",
-        "table_id": "Ch 8",
+        "table_id": "economics_market_equilibrium_11_quiz",
         "section": "Commerce"
       },
       {
