@@ -637,7 +637,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Correlation",
-        "table_id": "Ch 7",
+        "table_id": "economics_correlation_correlation_11_quiz",
         "section": "Commerce"
       },
       {
