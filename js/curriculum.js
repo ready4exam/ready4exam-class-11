@@ -868,7 +868,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Paths to Modernisation",
-        "table_id": "paths_modernisation_11_quiz",
+        "table_id": "history_paths_modernisation_11_quiz",
         "section": "Humanities"
       }
     ]
