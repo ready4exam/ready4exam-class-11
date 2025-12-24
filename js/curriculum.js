@@ -858,7 +858,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "The Industrial Revolution",
-        "table_id": "industrial_revolution_11_quiz",
+        "table_id": "history_industrial_revolution_11_quiz",
         "section": "Humanities"
       },
       {
