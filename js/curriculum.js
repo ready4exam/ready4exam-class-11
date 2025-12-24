@@ -819,7 +819,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Thinking",
-        "table_id": "Ch 8",
+        "table_id": "psychology_thinking_thinking_11_quiz",
         "section": "Humanities"
       },
       {
