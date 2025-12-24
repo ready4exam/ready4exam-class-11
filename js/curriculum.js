@@ -814,7 +814,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Human Memory",
-        "table_id": "Ch 7",
+        "table_id": "psychology_human_memory_11_quiz",
         "section": "Humanities"
       },
       {
