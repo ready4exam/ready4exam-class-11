@@ -789,7 +789,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "Methods of Enquiry in Psychology",
-        "table_id": "Ch 2",
+        "table_id": "psychology_methods_psychology_11_quiz",
         "section": "Humanities"
       },
       {
