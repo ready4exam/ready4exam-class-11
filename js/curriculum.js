@@ -1086,7 +1086,7 @@ export const curriculum = {
       },
       {
         "chapter_title": "मियां नसीरुद्दीन (Miyan Nasiruddin)",
-        "table_id": "H2",
+        "table_id": "hindi_miyaan_nasiruddin_11_quiz",
         "section": "Humanities"
       },
       {
